@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,17 +35,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-white text-black dark:bg-[#111] dark:text-white">
   <!-- header -->
   <header class=" border-b border-gray-200 dark:border-slate-700">
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center gap-6">
-          <button class="text-2xl text-white hover:text-[#818181]">
+          <button id="menuBtn" class="text-2xl text-white hover:text-[#818181]">
             <i class="fa-solid fa-bars"></i>
           </button>
-<img src="img/logo.png" class="mx-auto block dark:hidden" alt="logo">
-<img src="img/logo-dark.png" class="mx-auto hidden dark:block" alt="logo dark">
+          <img src="img/logo.png" class="mx-auto block dark:hidden" alt="logo">
+          <img src="img/logo-dark.png" class="mx-auto hidden dark:block" alt="logo dark">
 
           <!-- <span class="block box-border text-black dark:text-white cursor-pointer font-inter font-bold bg-transparent border-0 antialiased
     text-left whitespace-nowrap align-middle transition-all duration-300 ease-in-out text-[16px] tracking-[-0.3px] leading-[22px] h-[22px] w-[48px]
@@ -52,6 +54,128 @@
             MIX
           </span> -->
           <div class="hidden md:flex w-[1px] h-16 bg-gray-200 dark:bg-slate-700"></div>
+          <!-- mobile menubar -->
+          <div id="mobileMenu" class="fixed top-0 left-0 w-80 max-w-[90%] h-full bg-white dark:bg-[#111]
+         transform -translate-x-full transition-transform duration-300 z-50
+         overflow-y-auto">
+            <div class="p-4 flex justify-between items-center border-b border-gray-700">
+              <img src="img/logo.png" alt="Light Logo" class="block dark:hidden">
+              <img src="img/logo-dark.png" alt="Dark Logo" class="hidden dark:block">
+              <button id="closeMenu">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="flex flex-col p-4 gap-3 border-b border-gray-700 md:hidden">
+              <a href="#">Demos</a>
+              <a href="#">Features</a>
+              <a href="#">Post</a>
+              <a href="#">Categories</a>
+              <a href="#">Shop</a>
+              <a href="#">Buy Now</a>
+            </div>
+
+            <div class="p-4 space-y-8">
+              <p class="font-semibold mb-3 text-black dark:text-white">Follow us</p>
+
+              <ul class="flex justify-between">
+                <li>
+                  <a href="https://www.facebook.com/" class="flex flex-col items-center gap-1 hover:text-blue-500">
+                    <i class="fa-brands fa-facebook text-xl text-black dark:text-white"></i>
+                    <span class="text-sm text-black dark:text-white">53</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.instagram.com/" class="flex flex-col items-center gap-1 hover:text-pink-500">
+                    <i class="fa-brands fa-instagram text-xl text-black dark:text-white"></i>
+                    <span class="text-sm text-black dark:text-white">71</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.twitter.com/" class="flex flex-col items-center gap-1 hover:text-sky-400">
+                    <i class="fa-brands fa-twitter text-xl text-black dark:text-white"></i>
+                    <span class="text-sm text-black dark:text-white">53</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.youtube.com/" class="flex flex-col items-center gap-1 hover:text-red-500">
+                    <i class="fa-brands fa-youtube text-xl text-black dark:text-white"></i>
+                    <span class="text-sm text-black dark:text-white">71</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.pinterest.com/" class="flex flex-col items-center gap-1 hover:text-red-400">
+                    <i class="fa-brands fa-pinterest text-xl text-black dark:text-white"></i>
+                    <span class="text-sm text-black dark:text-white">71</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="bg-white dark:bg-black text-black dark:text-white border border-gray-800 p-4 rounded">
+                <h3 class="font-extrabold text-lg mb-2">
+                  Sign Up for Our <br> Newsletters
+                </h3>
+
+                <p class="text-gray-400 text-sm mb-4">
+                  Get notified of the best stories straight to your inbox.
+                </p>
+
+                <input type="email" placeholder="Enter your email address"
+                  class="w-full bg-white border border-gray-700 px-3 py-2 rounded-full mb-3 text-sm">
+
+                <button class="w-full bg-[#111] text-white py-2 rounded font-bold">
+                  Subscribe
+                </button>
+
+                <div class="flex items-start gap-2 mt-4">
+                  <input type="checkbox" class="mt-1 shrink-0">
+                  <p class="text-xs text-gray-400 leading-relaxed">
+                    By checking this box, you confirm that you have read and are agreeing to our
+                    terms of use regarding the storage of the data submitted through this form.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Popular -->
+              <div>
+                <h3 class="font-extrabold text-lg mb-4">Popular</h3>
+
+                <div class="flex gap-3 mb-4">
+                  <img src="img/critics.jpg" class="w-20 h-20 object-cover rounded">
+                  <div>
+                    <span class="text-gray-500 text-2xl font-light">1</span>
+                    <h3 class="font-bold text-sm leading-snug">
+                      Top 20 of the Best Celebrity Music Video Cameos
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="flex gap-3 mb-4">
+                  <img src="img/fiction books.jpg" class="w-20 h-20 object-cover rounded">
+                  <div>
+                    <span class="text-gray-500 text-2xl font-light">2</span>
+                    <h3 class="font-bold text-sm leading-snug">
+                      Top 20 of the Best Celebrity Music Video Cameos
+                    </h3>
+                  </div>
+                </div>
+
+                <div class="flex gap-3">
+                  <img src="img/studyabroad.jpg" class="w-20 h-20 object-cover rounded">
+                  <div>
+                    <span class="text-gray-500 text-2xl font-light">3</span>
+                    <h3 class="font-bold text-sm leading-snug">
+                      Top 20 of the Best Celebrity Music Video Cameos
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
           <!-- Menu -->
           <nav class="hidden lg:flex items-center block font-Inter gap-1 text-base font-extrabold">
             <a href="#" class="box-border text-black dark:text-white cursor-pointer font-Inter text-[14px] font-extrabold
@@ -113,17 +237,19 @@
         </div>
         <div class="flex items-center gap-5 text-sm">
           <div class="flex items-center gap-2">
-           
-            <svg id="sunIcon" class="w-6 h-6 text-black dark:text-gray-400 cursor-pointer hidden " xmlns="http://www.w3.org/2000/svg" height="24px"
-             viewBox="0 -960 960 960" width="24px" fill="#434343">
-              <path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z"/></svg>
+
+            <svg id="sunIcon" class="w-6 h-6 text-black dark:text-gray-400 cursor-pointer hidden "
+              xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343">
+              <path
+                d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z" />
+            </svg>
             <div id="themeToggle"
               class="hidden md:flex w-10 h-4 bg-gray-300 dark:bg-gray-600 rounded-full relative cursor-pointer transition-all duration-300">
               <span id="toggleCircle"
                 class="w-3 h-3 bg-white rounded-full absolute top-0.5 left-0.5 transition-all duration-300"></span>
             </div>
-            <svg id="moonIcon" class="w-6 h-6 text-black dark:text-gray-400 cursor-pointer hidden" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 -960 960 960" fill="currentColor">
+            <svg id="moonIcon" class="w-6 h-6 text-black dark:text-gray-400 cursor-pointer hidden"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
               <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 
     153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 
     3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
@@ -167,6 +293,7 @@
       </div>
     </div>
   </header>
+
   <!-- latesst section -->
   <section class="bg-white text-black dark:bg-[#111]  dark:text-white py-8">
     <div class="container mx-auto px-1">
@@ -194,7 +321,7 @@
 
             <p class="mt-3 text-sm text-[#fff] dark:text-white">
               <img src="img/user-1.jpeg" class="rounded-full text-sm inline-block" alt="">
-             <span class="text-xs text-white hover:text-gray-300">By Joanna Wilcox</span> 
+              <span class="text-xs text-white hover:text-gray-300">By Joanna Wilcox</span>
               <span class="text-gray-300 text-xs"> · February 2, 2026</span>
               <span class="text-gray-300 text-xs">. <i class="fa-solid fa-chart-column"></i> 850 views</span>
               <span class="text-gray-300 text-xs">· <i class="fa-solid fa-share-nodes"></i> 1k shares</span>
@@ -204,8 +331,7 @@
 
         <div class="text-black dark:text-white lg:px-8">
           <div class="flex items-center justify-between mb-4 ">
-            <h3
-              class="text-red-600 font-sriracha text-[20px] font-bold uppercase tracking-[-1px] leading-[20px] 
+            <h3 class="text-red-600 font-sriracha text-[20px] font-bold uppercase tracking-[-1px] leading-[20px] 
               break-words italic">
               The Latest
             </h3>
@@ -218,8 +344,9 @@
 
             <div class="flex gap-4 ">
               <div>
-                <span class="text-xs font-medium uppercase  text-black dark:text-[#fff] tracking-[1.25px] leading-[10px] ">Sports</span>
-                <h4 class="font-extrabold  text-xl text-black dark:text-[#fff] hover:text-gray-200 tracking-[-0.5px] leading-25px">
+                <span
+                  class="text-xs font-medium uppercase  text-black dark:text-[#fff] tracking-[1.25px] leading-[10px] ">Sports</span>
+                <h4 class="font-extrabold  text-xl dark:text-[#fff] dark:hover:text-gray-300 text-black hover:text-gray-600 tracking-[-0.5px] leading-[25px]">
                   Critics Agree – These Are the 13 Best Shows on TV Right Now
                 </h4>
                 <p class="text-sm text:[#d2d2d2] dark:text-[#d2d2d2] font-normal mt-1">
@@ -232,8 +359,9 @@
             <div class="border-t border-gray-600 mb-6"></div>
             <div class="flex gap-4">
               <div>
-                <span class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] leading-[10px]">Books</span>
-                <h4 class="font-extrabold  text-xl  text-black dark:text-[#fff] hover:text-gray-200 tracking-[-0.5px] leading-25px">
+                <span
+                  class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] leading-[10px]">Books</span>
+               <h4 class="font-extrabold  text-xl dark:text-[#fff] dark:hover:text-gray-300 text-black hover:text-gray-600 tracking-[-0.5px] leading-[25px]">
                   The 15 Best Music Videos Inspired by Pop Culture
                 </h4>
                 <p class="text-sm text:[#343a40] dark:text-gray-400 mt-1">
@@ -246,16 +374,17 @@
             <div class="border-t border-gray-600 mb-6"></div>
             <div class="flex gap-4">
               <div>
-                <span class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] leading-[10px] ">Entertainment , TV </span>
-                <h4 class="font-extrabold text-xl text-black dark:text-[#fff] hover:text-gray-200 tracking-[-0.5px] leading-25px">
+                <span
+                  class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] leading-[10px] ">Entertainment
+                  , TV </span>
+                <h4 class="font-extrabold  text-xl dark:text-[#fff] dark:hover:text-gray-300 text-black hover:text-gray-600 tracking-[-0.5px] leading-[25px]">
                   The Best New Teen TV<br> Shows of the Last Few <br>Years
                 </h4>
                 <p class="text-sm text:[#343a40] dark:text-gray-400 mt-1">
                   Aenean eleifend ante maecenas pulvinar montes...
                 </p>
               </div>
-              <img src="img/img-stay-3.jpg"
-                class="w-20 h-20 object-cover rounded-full" alt="" />
+              <img src="img/img-stay-3.jpg" class="w-20 h-20 object-cover rounded-full" alt="" />
             </div>
           </div>
         </div>
@@ -263,60 +392,67 @@
     </div>
   </section>
   <!-- Banner / Trending Now Section -->
- <section class="bg-white text-black dark:bg-[#111] dark:text-white text-xl font-bold font-sans py-5 px-4 md:px-18">
-  <div class="bg-gray-100 dark:bg-black py-12">
-    <div class="container mx-auto">
-      <div class="flex flex-col md:flex-row items-start md:items-center">
-                <div class="flex items-center space-x-4 min-w-[220px] mb-4 md:mb-0">
-          <h2 class="text-red-500 italic font-bold text-xl uppercase flex items-center gap-2">
-            Trending Now
-            <img src="img/tick.png" class="w-20 h-5" alt="">
-          </h2>
-        </div>
-
-        <div class="flex flex-col md:flex-row flex-1 md:justify-between gap-4 md:gap-2 overflow-x-auto md:overflow-visible">
-                    <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
-            <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66" class="w-16 h-16 rounded-full object-cover border border-gray-700">
-            <div>
-              <h3 class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
-                20 Ya Books That Will<br>Get You Pumped for<br>Study Abroad
-              </h3>
-              <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
-                <span><i class="fa-solid fa-chart-column"></i> 1.9K VIEWS</span>
-                <span><i class="fa-solid fa-share-nodes"></i> 535 SHARES</span>
-              </div>
-            </div>
-          </div>
-          <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
-            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="w-16 h-16 rounded-full object-cover border border-gray-700">
-            <div>
-              <h3 class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
-                20 Music <br> Documentaries That <br>Will Excite Your Inner <br>Rockstar
-              </h3>
-              <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
-                <span><i class="fa-solid fa-chart-column"></i> 1.6K VIEWS</span>
-                <span><i class="fa-solid fa-share-nodes"></i> 521 SHARES</span>
-              </div>
-            </div>
-          </div>
-          <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="w-16 h-16 rounded-full object-cover border border-gray-700">
-            <div>
-              <h3 class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
-                17 Summer Reads<br>Perfect for a Day on<br>the Beach
-              </h3>
-              <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
-                <span><i class="fa-solid fa-chart-column"></i> 651 VIEWS</span>
-                <span><i class="fa-solid fa-share-nodes"></i> 435 SHARES</span>
-              </div>
-            </div>
+  <section class="bg-white text-black dark:bg-[#111] dark:text-white text-xl font-bold font-sans py-5 px-4 md:px-18">
+    <div class="bg-gray-100 dark:bg-black py-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-start md:items-center">
+          <div class="flex items-center space-x-4 min-w-[220px] mb-4 md:mb-0">
+            <h2 class="text-red-500 italic font-bold text-xl uppercase flex items-center gap-2">
+              Trending Now
+              <img src="img/tick.png" class="w-20 h-5 hidden md:flex" alt="firsttick">
+            </h2>
           </div>
 
+          <div
+            class="flex flex-col md:flex-row flex-1 md:justify-between gap-4 md:gap-2 overflow-x-auto md:overflow-visible">
+            <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
+              <img src="https://images.unsplash.com/photo-1518655048521-f130df041f66"
+                class="w-16 h-16 rounded-full object-cover border border-gray-700">
+              <div>
+                <h3
+                  class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
+                  20 Ya Books That Will<br>Get You Pumped for<br>Study Abroad
+                </h3>
+                <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
+                  <span><i class="fa-solid fa-chart-column"></i> 1.9K VIEWS</span>
+                  <span><i class="fa-solid fa-share-nodes"></i> 535 SHARES</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+                class="w-16 h-16 rounded-full object-cover border border-gray-700">
+              <div>
+                <h3
+                  class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
+                  20 Music <br> Documentaries That <br>Will Excite Your Inner <br>Rockstar
+                </h3>
+                <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
+                  <span><i class="fa-solid fa-chart-column"></i> 1.6K VIEWS</span>
+                  <span><i class="fa-solid fa-share-nodes"></i> 521 SHARES</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4 min-w-[250px] md:min-w-[0]">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                class="w-16 h-16 rounded-full object-cover border border-gray-700">
+              <div>
+                <h3
+                  class="bg-transparent text:black dark:text-white font-Inter not-italic text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] wrap-break-word decoration-solid cursor-pointer transition-all duration-300 ease-in-out no-underline mb-2">
+                  17 Summer Reads<br>Perfect for a Day on<br>the Beach
+                </h3>
+                <div class="text-xs text-gray-700 flex space-x-4 mt-1 text-[#858585] font-normal">
+                  <span><i class="fa-solid fa-chart-column"></i> 651 VIEWS</span>
+                  <span><i class="fa-solid fa-share-nodes"></i> 435 SHARES</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Popular Section -->
   <section class="bg-white text-black dark:bg-[#111] dark:text-white container mx-auto px-10">
@@ -416,35 +552,35 @@
           </div>
         </div>
         <div class="group">
-           <a href="books.html"> 
-          <div class="overflow-hidden">
-            <img src="img/img-4.jpg" alt=""
-              class="w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="flex gap-4 mt-4">
-            <span class="text-gray-500 text-3xl font-light leading-none">
-              4
-            </span>
-            <div>
-      
-              <h3 class="text-black dark:text-white font-extrabold text-xl leading-[25px] tracking-[-0.5px]">
-                20 Hot TV Detectives <br>We Want to Put Us in<br> Handcuffs
-              </h3></a>
-              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-                <div class="flex items-center gap-1">
-                  <i class="fa-solid fa-chart-column text-[10px]"></i>
-                  431 Views
-                </div>
-                <span>•</span>
-                <div class="flex items-center gap-1">
-                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                  999 Shares
-                </div>
-              </div>
+          <a href="books.html">
+            <div class="overflow-hidden">
+              <img src="img/img-4.jpg" alt="image4"
+                class="w-full h-[260px] object-cover group-hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="flex gap-4 mt-4">
+              <span class="text-gray-500 text-3xl font-light leading-none">
+                4
+              </span>
+              <div>
+                <h3 class="text-black dark:text-white font-extrabold text-xl leading-[25px] tracking-[-0.5px]">
+                  20 Hot TV Detectives <br>We Want to Put Us in<br> Handcuffs
+                </h3>
+          </a>
+          <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-chart-column text-[10px]"></i>
+              431 Views
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-share-nodes text-[10px]"></i>
+              999 Shares
             </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   </section>
   <!-- Staying Home Section -->
@@ -460,25 +596,22 @@
               class="w-full h-[380px] object-cover transition-transform duration-500 group-hover:scale-105" alt="" />
             <span class="absolute left-4 bg-black text-white hover:bg-[#daf400] hover:text-black 
              text-[10px] font-bold px-3 py-1 uppercase tracking-wider" style="bottom: 100px;"> Cars</span>
-            <h3
-              class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold
+            <h3 class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold
                leading-tight hover:bg-[#daf400] hover:text-black ">
               20 TV Shows That Weren't
             </h3>
             <br>
-            <h3
-              class="absolute bottom-2 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
+            <h3 class="absolute bottom-2 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
               leading-tight hover:bg-[#daf400] hover:text-black ">
               Flimed Where They are Set
             </h3>
           </div>
           <div class="flex items-center gap-3 py-4 text-[11px] text-gray-400">
             <img src="img/user-1.jpeg" class="w-7 h-7 rounded-full object-cover" />
-            <span
-  class="uppercase tracking-wide font-semibold text-black dark:text-white 
+            <span class="uppercase tracking-wide font-semibold text-black dark:text-white 
          hover:text-[#818181] dark:hover:text-gray-400 cursor-pointer transition-colors duration-200">
-  By Elliot Alderson
-</span>
+              By Elliot Alderson
+            </span>
 
             <span class="ml-auto">187 Views</span>
             <span>•</span>
@@ -492,14 +625,12 @@
           duration-500 group-hover:scale-105" alt="" />
             <span class="absolute left-4 bg-black text-white hover:bg-[#daf400] hover:text-black 
              text-[10px] font-bold px-3 py-1 uppercase tracking-wider" style="bottom: 100px;">Sports</span>
-            <h3
-              class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
+            <h3 class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
               leading-tight hover:bg-[#daf400] hover:text-black ">
               20 Brilliant TV Shows to Keep
             </h3>
             <br>
-            <h3
-              class="absolute bottom-2 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
+            <h3 class="absolute bottom-2 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
               leading-tight hover:bg-[#daf400] hover:text-black ">
               You Entertained This Season
             </h3>
@@ -507,7 +638,8 @@
           <div class="flex items-center gap-3 py-4 text-[11px] text-gray-400">
             <img src="img/user-1.jpeg" class="w-7 h-7 rounded-full object-cover" />
             <span class="uppercase tracking-wide font-semibold text-black dark:text-white 
-         hover:text-[#818181] dark:hover:text-gray-400 cursor-pointer transition-colors duration-200">By Elliot Alderson</span>
+         hover:text-[#818181] dark:hover:text-gray-400 cursor-pointer transition-colors duration-200">By Elliot
+              Alderson</span>
             <span class="ml-auto">2.8K Views</span>
             <span>•</span>
             <span>816 Shares</span>
@@ -520,14 +652,12 @@
               class="w-full h-[380px] object-cover transition-transform duration-500 group-hover:scale-105" />
             <span class="absolute left-4 bg-black text-white hover:bg-[#daf400] hover:text-black 
              text-[10px] font-bold px-3 py-1 uppercase tracking-wider" style="bottom: 100px;">Cars</span>
-            <h3
-              class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
+            <h3 class="absolute bottom-12 left-4 right-4 bg-black text-white px-3 py-2 text-[18px] font-extrabold 
               leading-tight hover:bg-[#daf400] hover:text-black ">
               15 Worst TV Shows Ever (but
             </h3>
             <br>
-            <h3
-              class="absolute bottom-2 left-4 right-4  bg-black text-white px-3 py-2 text-[18px] font-extrabold 
+            <h3 class="absolute bottom-2 left-4 right-4  bg-black text-white px-3 py-2 text-[18px] font-extrabold 
               leading-tight hover:bg-[#daf400] hover:text-black ">
               You Can't Stop Watching Them)
             </h3>
@@ -535,7 +665,8 @@
           <div class="flex items-center gap-3 py-4 text-[11px] text-gray-400">
             <img src="img/user-1.jpeg" class="w-7 h-7 rounded-full object-cover" />
             <span class="uppercase tracking-wide font-semibold text-black dark:text-white 
-         hover:text-[#818181] dark:hover:text-gray-400 cursor-pointer transition-colors duration-200">By Elliot Alderson</span>
+         hover:text-[#818181] dark:hover:text-gray-400 cursor-pointer transition-colors duration-200">By Elliot
+              Alderson</span>
             <span class="ml-auto">2.9K Views</span>
             <span>•</span>
             <span>756 Shares</span>
@@ -548,153 +679,187 @@
   </section>
   <!-- (Articles / Small Cards) -->
   <section class="bg-white text-black dark:bg-[#111] dark:text-white py-6">
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            <div class="pb-2 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=1" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div class="pb-2 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=1" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              12 the Funniest Characters <br> Currently on TV
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1 ">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                12 the Funniest Characters <br> Currently on TV
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1 ">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=2" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+        <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=2" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              Underappreciated '90s Horror <br>Movies You Haven't Seen
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                Underappreciated '90s Horror <br>Movies You Haven't Seen
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=3" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+        <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 lg:border-b md:pb-0 lg:pb-6">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=3" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              100 the Best Pop Songs of the <br>'80s, Ranked
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                100 the Best Pop Songs of the <br>'80s, Ranked
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 md:pb-0">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=4" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+        <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 md:pb-0">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=4" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              25 Best Anime of All Time That You <br>Will Want to See
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                25 Best Anime of All Time That You <br>Will Want to See
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 md:pb-0">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=5" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+        <div class="pb-6 border-b border-gray-300 dark:border-gray-700 md:border-b-0 md:pb-0">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=5" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              Here Are the Worst TV Show <br> Endings of All Time, Ranked
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                Here Are the Worst TV Show <br> Endings of All Time, Ranked
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pb-6 md:pb-0">
-        <div class="flex items-start gap-3">
-          <img src="https://i.pravatar.cc/40?img=6" class="w-24 h-24 rounded-full">
-          <div class="flex flex-col w-full">
-            <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
+        <div class="pb-6 md:pb-0">
+          <div class="flex items-start gap-3">
+            <img src="https://i.pravatar.cc/40?img=6" class="w-24 h-24 rounded-full">
+            <div class="flex flex-col w-full">
+              <p class="bg-transparent box-border hover:text-[#858585] text-black dark:text-white dark:hover:text-gray-300
               cursor-pointer inline font-inter text-[16px] font-extrabold tracking-[-0.4px] leading-[20px] break-words text-left 
               no-underline antialiased transition-all duration-[250ms] ease-in-out">
-              15 the Most Memorable Ad Slogans<br>of All Time
-            </p>
-            <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-chart-column text-[10px]"></i>
-                431 Views
-              </div>
-              <span>•</span>
-              <div class="flex items-center gap-1">
-                <i class="fa-solid fa-share-nodes text-[10px]"></i>
-                999 Shares
+                15 the Most Memorable Ad Slogans<br>of All Time
+              </p>
+              <div class="mt-3 flex items-center gap-3 text-[11px] text-[#858585] uppercase">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-chart-column text-[10px]"></i>
+                  431 Views
+                </div>
+                <span>•</span>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-share-nodes text-[10px]"></i>
+                  999 Shares
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- BANNER / HERO IMAGE SECTION -->
-  <section class="relative h-[80vh]">
+  <section class="relative min-h-[80vh] h-auto md:h-[80vh]">
+    <img src="img/25Movieending.jpg" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="absolute inset-0 flex items-end">
+      <div class="w-full px-4 pb-6 md:pb-10 max-w-2xl mx-auto text-white">
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 transform max-w-2xl text-white text-start">
+          <span
+            class="inline-block bg-[#daf400] text-black hover:bg-black hover:text-white px-3 py-1 text-xs font-semibold mb-3">
+            MUSIC
+          </span>
+          <h1
+            class="text-2xl md:text-3xl font-extrabold leading-tight mb-2 bg-black text-white hover:bg-[#daf400] hover:text-black text-start">
+            The Best 25 Bands That Start<br>
+            With the Letter E
+          </h1>
+          <p class="text-gray-300 text-sm mb-4">
+            Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+          </p>
+
+          <p class="mt-3 text-sm text-[#fff] dark:text-white">
+            <img src="img/user-1.jpeg" class="rounded-full text-sm inline-block" alt="">
+            <span class="text-white hover:text-gray-300 text-xs">By Joanna Wilcox</span>
+            <span class="text-gray-300 text-xs"> · February 2, 2026</span>
+            <span class="text-gray-300 text-xs">. <i class="fa-solid fa-chart-column"></i> 850 views</span>
+            <span class="text-gray-300 text-xs">· <i class="fa-solid fa-share-nodes"></i> 1k shares</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="relative h-[80vh]">
     <img src="img/25Movieending.jpg" class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="absolute bottom-10 left-1/2 -translate-x-1/2 transform max-w-2xl text-white text-start">
@@ -719,18 +884,19 @@
         <span class="text-gray-300 text-xs">· <i class="fa-solid fa-share-nodes"></i> 1k shares</span>
       </p>
     </div>
-  </section>
+  </section> -->
   <!-- entertainment -->
   <section class="bg-white text-black dark:bg-[#111] dark:text-white py-14">
     <div class="container mx-auto px-4 md:px-10">
-      <h2 class="text-[20px] font-extrabold leading-[20px] tracking-[-0.5px] mb-10">
+      <h2 class="text-[20px] font-extrabold leading-[20px] tracking-[-0.5px] mb-10 px-6">
         Entertainment
       </h2>
       <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2">
           <div class="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 rounded">
             <img src="img/25mind.jpg" class="w-full h-34 object-cover">
-            <span class="absolute text-black dark:text-white text-[10px] font-bold px-4 py-1 uppercase tracking-wider mt-4 p-6">
+            <span
+              class="absolute text-black dark:text-white text-[10px] font-bold px-4 py-1 uppercase tracking-wider mt-4 p-6">
               Cars
             </span>
             <div class="p-4 mt-6">
@@ -847,7 +1013,7 @@
           </div>
 
         </div>
-          <!-- Newsletter -->
+        <!-- Newsletter -->
         <div class="space-y-8">
           <div class="bg-white text-black dark:bg-black dark:text-white border border-gray-800 p-6 rounded">
             <h3 class="font-extrabold text-lg mb-2">Sign Up for Our
@@ -1037,40 +1203,34 @@
     </div>
   </section>
   <!-- NEWSLETTER SECTION -->
- <section class="bg-gray-100 dark:bg-black dark:text-white py-20">
-  <div class="container mx-auto px-6 flex flex-col lg:flex-row gap-8 lg:gap-6 items-start lg:items-center">
-    
-    <div class="flex flex-col items-start gap-2 lg:w-1/6">
-      <span class="text-red-500 italic font-bold">NEWSLETTER</span>
-      <img src="img/tick.png" alt="tick" class="w-20 h-6 md:w-24 md:h-8">
-    </div>
-        <div class="flex-1 lg:w-2/5">
-      <h2 class="text-black dark:text-white text-xl md:text-2xl font-extrabold mb-2 leading-snug tracking-tight">
-        Sign Up for Our Newsletters
-      </h2>
-      <p class="text-gray-400 text-sm md:text-base">
-        Get notified of the best deals on our<br> WordPress themes.
-      </p>
-    </div>
-        <div class="flex-1 flex flex-col gap-3 w-full">
-            <div class="flex flex-col sm:flex-row w-full md:rounded-full bg-white border border-gray-300 overflow-hidden
-            px-4 py-2">
-        <input
-          type="text"
-          placeholder="Enter your name"
-          class="w-full sm:flex-1 px-3 py-2 text-sm text-black outline-none bg-transparent rounded-none"
-        />
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="w-full sm:flex-1 px-3 py-2 text-sm text-black outline-none bg-transparent rounded-none mt-2 sm:mt-0 sm:mx-2"
-        />
-        <button class="bg-[#242424] text-white px-4 py-2 font-bold flex items-center gap-2 rounded-none mt-2 sm:mt-0">
-          Subscribe
-          <i class="fa-solid fa-chevron-right fa-2xs"></i>
-        </button>
+  <section class="bg-gray-100 dark:bg-black dark:text-white py-20">
+    <div class="container mx-auto px-6 flex flex-col lg:flex-row gap-8 lg:gap-6 items-start lg:items-center">
+
+      <div class="flex flex-col items-start gap-2 lg:w-1/6">
+        <span class="text-red-500 italic font-bold">NEWSLETTER</span>
+        <img src="img/tick.png" alt="secondtick" class="w-20 h-6 hidden md:flex">
       </div>
-            <div class="flex items-start gap-2 mt-3 text-xs text-gray-400">
+      <div class="flex-1 lg:w-2/5">
+        <h2 class="text-black dark:text-white text-xl md:text-2xl font-extrabold mb-2 leading-snug tracking-tight">
+          Sign Up for Our Newsletters
+        </h2>
+        <p class="text-gray-400 text-sm md:text-base">
+          Get notified of the best deals on our<br> WordPress themes.
+        </p>
+      </div>
+      <div class="flex-1 flex flex-col gap-3 w-full">
+        <div class="flex flex-col sm:flex-row w-full md:rounded-full bg-white border border-gray-300 overflow-hidden
+            px-4 py-2">
+          <input type="text" placeholder="Enter your name"
+            class="w-full sm:flex-1 px-3 py-2 text-sm text-black outline-none bg-transparent rounded-none" />
+          <input type="email" placeholder="Enter your email"
+            class="w-full sm:flex-1 px-3 py-2 text-sm text-black outline-none bg-transparent rounded-none mt-2 sm:mt-0 sm:mx-2" />
+          <button class="bg-[#242424] text-white px-4 py-2 font-bold flex items-center gap-2 rounded-none mt-2 sm:mt-0">
+            Subscribe
+            <i class="fa-solid fa-chevron-right fa-2xs"></i>
+          </button>
+        </div>
+        <div class="flex items-start gap-2 mt-3 text-xs text-gray-400">
           <input type="checkbox" class="mt-1">
           <p>
             By checking this box, you confirm that you have read and are agreeing
@@ -1080,10 +1240,10 @@
         </div>
 
 
+      </div>
+
     </div>
-    
-  </div>
-</section>
+  </section>
   <!--oscar -->
   <section class="py-14">
     <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -1190,34 +1350,14 @@
   </section>
   <!-- article -->
   <section class="bg-white text-black dark:bg-[#111] dark:text-white py-14">
-  <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10">
-    <!-- LEFT: Latest News -->
-    <div class="lg:col-span-8">
-      <h2 class="text-lg font-extrabold uppercase mb-6">Latest News</h2>
-      <div class="space-y-6">
-        <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+    <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- LEFT: Latest News -->
+      <div class="lg:col-span-8 ">
+        <h2 class="text-lg font-extrabold uppercase mb-6">Latest News</h2>
+        <div class="space-y-6 border border-gray-800 px-6 py-4">
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
 
-          <div class="flex-1 flex flex-col justify-center">
-              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
-
-              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
-                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
-              </h3>
-
-              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
-                Breaking down the most popular television series <br> everyone's talking about this season.
-              </p>
-
-              <div class="flex items-center text-[#858585] text-xs gap-1">
-                <span>Feb 12, 2026</span>
-                <span>•</span>
-                <span>1.2K Views</span>
-              </div>
-            </div>
-          </article>
-           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
             <div class="flex-1 flex flex-col justify-center">
               <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
 
@@ -1237,47 +1377,7 @@
             </div>
           </article>
           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
-            <div class="flex-1 flex flex-col justify-center">
-              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
-
-              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
-                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
-              </h3>
-
-              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
-                Breaking down the most popular television series <br> everyone's talking about this season.
-              </p>
-
-              <div class="flex items-center text-[#858585] text-xs gap-1">
-                <span>Feb 12, 2026</span>
-                <span>•</span>
-                <span>1.2K Views</span>
-              </div>
-            </div>
-          </article>
-           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
-            <div class="flex-1 flex flex-col justify-center">
-              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
-
-              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
-                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
-              </h3>
-
-              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
-                Breaking down the most popular television series <br> everyone's talking about this season.
-              </p>
-
-              <div class="flex items-center text-[#858585] text-xs gap-1">
-                <span>Feb 12, 2026</span>
-                <span>•</span>
-                <span>1.2K Views</span>
-              </div>
-            </div>
-          </article>
-           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
             <div class="flex-1 flex flex-col justify-center">
               <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
 
@@ -1297,7 +1397,67 @@
             </div>
           </article>
           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+            <div class="flex-1 flex flex-col justify-center">
+              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
+
+              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
+                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
+              </h3>
+
+              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
+                Breaking down the most popular television series <br> everyone's talking about this season.
+              </p>
+
+              <div class="flex items-center text-[#858585] text-xs gap-1">
+                <span>Feb 12, 2026</span>
+                <span>•</span>
+                <span>1.2K Views</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+            <div class="flex-1 flex flex-col justify-center">
+              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
+
+              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
+                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
+              </h3>
+
+              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
+                Breaking down the most popular television series <br> everyone's talking about this season.
+              </p>
+
+              <div class="flex items-center text-[#858585] text-xs gap-1">
+                <span>Feb 12, 2026</span>
+                <span>•</span>
+                <span>1.2K Views</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+            <div class="flex-1 flex flex-col justify-center">
+              <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
+
+              <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
+                Critics Agree: "These Are the 12 Best <br> Shows on TV Right Now"
+              </h3>
+
+              <p class="text-sm text-[#343a40] dark:text-gray-400  mb-3">
+                Breaking down the most popular television series <br> everyone's talking about this season.
+              </p>
+
+              <div class="flex items-center text-[#858585] text-xs gap-1">
+                <span>Feb 12, 2026</span>
+                <span>•</span>
+                <span>1.2K Views</span>
+              </div>
+            </div>
+          </article>
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
 
             <div class="flex-1 flex flex-col justify-center">
               <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
@@ -1317,8 +1477,8 @@
               </div>
             </div>
           </article>
-            <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
             <div class="flex-1 flex flex-col justify-center">
               <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
               <h3 class="text-lg font-extrabold leading-tight hover:text-gray-400 cursor-pointer mb-3">
@@ -1335,8 +1495,8 @@
               </div>
             </div>
           </article>
-           <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
-          <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
+          <article class="flex flex-col md:flex-row gap-5 border-b border-gray-800 pb-6">
+            <img src="img/25actors.jpg" class="w-full md:w-80 h-64 md:h-80 object-cover rounded">
             <div class="flex-1 flex flex-col justify-center">
               <span class="text-xs uppercase text-black dark:text-white mb-2">Sports</span>
 
@@ -1357,10 +1517,11 @@
           </article>
         </div>
         <div class="flex justify-center mt-5">
-  <button class="flex text-sm font-bold bg-[#daf400] text-black hover:bg-black hover:text-white px-4 py-2 items-center rounded-full">
-    Load More
-  </button>
-</div>
+          <button
+            class="flex text-sm font-bold bg-[#daf400] text-black hover:bg-black hover:text-white px-4 py-2 items-center rounded-full">
+            Load More
+          </button>
+        </div>
       </div>
 
       <!-- RIGHT -->
@@ -1370,7 +1531,7 @@
         <div class="space-y-5">
           <div class="flex gap-4 grid">
             <img src="img/latestreviews.jpg" class="aspect-380 /280 rounded">
-                            <span class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] 
+            <span class="text-xs font-medium uppercase dark:text-[#fff] tracking-[1.25px] 
                             leading-[10px] mt-3">cars</span>
 
             <h4 class="text-2xl font-extrabold leading-[30px] tracking-[-0.4px] font-Inter hover:text-[#5a5a5a]">
@@ -1379,119 +1540,116 @@
             </h4>
             <p class="text-sm text-[#fff] dark:text-white">
               <span class="text-gray-300 text-xs">February 2, 2026</span>
-       <span class="text-xs text-white hover:text-gray-300"> By Joanna Wilcox </span>
-      </p>
-      <div class="flex items-center gap-1">
-  <div class="flex gap-1">
-    <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
-    <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
-    <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
-    <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-    <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-  </div>
+              <span class="text-xs text-white hover:text-gray-300"> By Joanna Wilcox </span>
+            </p>
+            <div class="flex items-center gap-1">
+              <div class="flex gap-1">
+                <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
+                <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
+                <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
+                <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+              </div>
 
-  <span class="text-black dark:text-white text-sm font-semibold">3/5</span>
-</div>
+              <span class="text-black dark:text-white text-sm font-semibold">3/5</span>
+            </div>
 
           </div>
-           <div class="flex gap-4">
-  <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
-  <div class="flex flex-col gap-2">
-    <span
-      class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
-      cars
-    </span>
+          <div class="flex gap-4">
+            <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
+            <div class="flex flex-col gap-2">
+              <span class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
+                cars
+              </span>
 
-    <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
-      Top 25 Most Powerful <br>
-      Superheroes of All Time
-    </h4>
+              <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
+                Top 25 Most Powerful <br>
+                Superheroes of All Time
+              </h4>
 
-    <p class="text-sm">
-      <span class="text-gray-300 text-xs">February 2, 2026</span>
-      <span class="text-xs text-white hover:text-gray-300">
-        By Joanna Wilcox
-      </span>
-    </p>
-    <div class="flex items-center gap-2">
-      <div class="flex gap-1">
-        <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
-        <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
-        <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-      </div>
-      <span class="text-black dark:text-white text-sm font-semibold">4/5</span>
-    </div>
-  </div>
-</div>
- <div class="flex gap-4">
-  <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
-  <div class="flex flex-col gap-2">
-    <span
-      class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
-      cars
-    </span>
+              <p class="text-sm">
+                <span class="text-gray-300 text-xs">February 2, 2026</span>
+                <span class="text-xs text-white hover:text-gray-300">
+                  By Joanna Wilcox
+                </span>
+              </p>
+              <div class="flex items-center gap-2">
+                <div class="flex gap-1">
+                  <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                </div>
+                <span class="text-black dark:text-white text-sm font-semibold">4/5</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
+            <div class="flex flex-col gap-2">
+              <span class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
+                cars
+              </span>
 
-    <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
-      Top 25 Most Powerful <br>
-      Superheroes of All Time
-    </h4>
+              <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
+                Top 25 Most Powerful <br>
+                Superheroes of All Time
+              </h4>
 
-    <p class="text-sm">
-      <span class="text-gray-300 text-xs">February 2, 2026</span>
-      <span class="text-xs text-white hover:text-gray-300">
-        By Joanna Wilcox
-      </span>
-    </p>
-    <div class="flex items-center gap-2">
-      <div class="flex gap-1">
-        <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
-        <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
-        <span class="w-6 h-2 bg-yellow-400 dark:bg-gray-700 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-      </div>
-      <span class="text-black dark:text-white text-sm font-semibold">2/5</span>
-    </div>
-  </div>
-</div>
- <div class="flex gap-4">
-  <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
-  <div class="flex flex-col gap-2">
-    <span
-      class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
-      cars
-    </span>
+              <p class="text-sm">
+                <span class="text-gray-300 text-xs">February 2, 2026</span>
+                <span class="text-xs text-white hover:text-gray-300">
+                  By Joanna Wilcox
+                </span>
+              </p>
+              <div class="flex items-center gap-2">
+                <div class="flex gap-1">
+                  <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-yellow-400 dark:bg-gray-700 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                </div>
+                <span class="text-black dark:text-white text-sm font-semibold">2/5</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <img src="img/latestreviews.jpg" class="w-20 h-20 rounded object-cover">
+            <div class="flex flex-col gap-2">
+              <span class="text-xs font-medium uppercase dark:text-white tracking-[1.25px] leading-[10px]">
+                cars
+              </span>
 
-    <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
-      Top 25 Most Powerful <br>
-      Superheroes of All Time
-    </h4>
+              <h4 class="text-sm font-extrabold font-Inter hover:text-[#5a5a5a]">
+                Top 25 Most Powerful <br>
+                Superheroes of All Time
+              </h4>
 
-    <p class="text-sm">
-      <span class="text-gray-300 text-xs">February 2, 2026</span>
-      <span class="text-xs text-white hover:text-gray-300">
-        By Joanna Wilcox
-      </span>
-    </p>
-    <div class="flex items-center gap-2">
-      <div class="flex gap-1">
-        <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
-        <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
-        <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-        <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
-      </div>
-      <span class="text-black dark:text-white text-sm font-semibold">3/5</span>
-    </div>
-  </div>
-</div>
+              <p class="text-sm">
+                <span class="text-gray-300 text-xs">February 2, 2026</span>
+                <span class="text-xs text-white hover:text-gray-300">
+                  By Joanna Wilcox
+                </span>
+              </p>
+              <div class="flex items-center gap-2">
+                <div class="flex gap-1">
+                  <span class="w-6 h-2 bg-red-500 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-orange-400 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-yellow-400 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                  <span class="w-6 h-2 bg-gray-300 dark:bg-gray-700 rounded-sm"></span>
+                </div>
+                <span class="text-black dark:text-white text-sm font-semibold">3/5</span>
+              </div>
+            </div>
+          </div>
 
 
           <div class="sticky top-24">
-<img src="img/banner-half-page.jpg" class="mx-auto mt-6 w-full">
-  </div>
+            <img src="img/banner-half-page.jpg" class="mx-auto mt-6 w-full">
+          </div>
         </div>
       </div>
 
@@ -1502,7 +1660,7 @@
     <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
       <div class="flex items-center gap-4">
         <span class="italic font-extrabold text-sm tracking-widest">NEWSLETTER</span>
-        <img src="img/arrow.svg" alt="" class="">
+        <img src="img/arrow.svg" alt="thirdtick" class="hidden md:flex">
       </div>
       <div>
         <h2 class="text-2xl md:text-xl font-extrabold mb-2">
@@ -1513,19 +1671,15 @@
         </p>
       </div>
       <div>
-       <div class="flex bg-white rounded-full p-2">
-  <input 
-    type="email" 
-    placeholder="Enter your email"
-    class="w-full px-5 py-1 text-black outline-none bg-transparent"
-  />
+        <div class="flex bg-white rounded-full p-2">
+          <input type="email" placeholder="Enter your email"
+            class="w-full px-5 py-1 text-black outline-none bg-transparent" />
 
-  <button 
-    class="bg-gray-500 text-white px-3 py-1 font-bold flex items-center gap-2">
-    Subscribe
-     <i class="fa-solid fa-chevron-right fa-2xs"></i>
-  </button>
-</div>
+          <button class="bg-gray-500 text-white px-3 py-1 font-bold flex items-center gap-2">
+            Subscribe
+            <i class="fa-solid fa-chevron-right fa-2xs"></i>
+          </button>
+        </div>
 
         <div class="flex items-start gap-2 mt-3 text-xs text-gray-400">
           <input type="checkbox" class="mt-1">
@@ -1549,7 +1703,7 @@
  font-semibold">Code Supply Co.</span>
         </p>
       </div>
-      
+
       <div class="flex flex-wrap gap-4 text-sm font-semibold">
         <a href="#" class="hover:text-gray-400">Shop</a>
         <a href="#" class="hover:text-gray-400">Contact Form</a>
