@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: normal;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override any stubborn elements */
+header nav a {
+    color: #374151 !important;
+}
+
+.dark header nav a {
+    color: #d1d5db !important;
+}
+
+header svg, 
+header i {
+    color: #374151 !important;
+}
+
+.dark header svg,
+.dark header i {
+    color: #d1d5db !important;
+}
+
+/* Fix the logo */
+span.block {
+    color: #000000 !important;
+}
+
+.dark span.block {
+    color: #ffffff !important;
+}
