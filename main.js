@@ -4,6 +4,7 @@ const circle = document.getElementById("toggleCircle");
 const sun = document.getElementById("sunIcon");
 const moon = document.getElementById("moonIcon");
 const html = document.documentElement;
+// const smToogle = document.getElementById("themeToggleMb")
 
 const getPreferredTheme = () => {
     const savedTheme = localStorage.getItem('theme');
@@ -17,7 +18,7 @@ const applyTheme = (theme) => {
     if (theme === 'dark') {
         html.classList.add('dark');
         circle.style.transform = 'translateX(26px)';
-        sun.classList.add('hidden');
+        // sun.classList.add('hidden');
         moon.classList.remove('hidden');
         // Show moon icon in dark mode
         moon.classList.remove('dark:hidden');
@@ -26,7 +27,7 @@ const applyTheme = (theme) => {
         html.classList.remove('dark');
         circle.style.transform = 'translateX(0px)';
         sun.classList.remove('hidden');
-        moon.classList.add('hidden');
+        // moon.classList.add('hidden');
         // Show sun icon in light mode
         sun.classList.remove('dark:hidden');
         sun.classList.add('dark:block');
@@ -61,4 +62,20 @@ const menuBtn = document.getElementById("menuBtn");
 
   closeMenu.addEventListener("click", () => {
     mobileMenu.classList.add("-translate-x-full");
+  });
+
+  const menuItems = document.querySelectorAll(".menu-item");
+  const contentGroups = document.querySelectorAll(".content-group");
+
+  menuItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      const category = item.dataset.category;
+
+      contentGroups.forEach(content => {
+        content.classList.add("hidden");
+        if (content.dataset.content === category) {
+          content.classList.remove("hidden");
+        }
+      });
+    });
   });
