@@ -13,14 +13,6 @@ body {
 }
 
 /* Override any stubborn elements */
-header nav a {
-    color: #374151 !important;
-}
-
-.dark header nav a {
-    color: #d1d5db !important;
-}
-
 header svg, 
 header i {
     color: #374151 !important;
@@ -28,9 +20,12 @@ header i {
 
 .dark header svg,
 .dark header i {
-    color: #d1d5db !important;
+    color: #fff !important;
 }
-
+.dark header i :hover,
+.dark header svg :hover {
+    color: #818181 !important;
+}
 /* Fix the logo */
 span.block {
     color: #000000 !important;
