@@ -66,7 +66,6 @@ updateMobileIcons();
 
 const currentTheme = getPreferredTheme();
 applyTheme(currentTheme);
-
 toggle.addEventListener("click", () => {
   const isDark = html.classList.contains("dark");
   const newTheme = isDark ? "light" : "dark";
@@ -74,7 +73,6 @@ toggle.addEventListener("click", () => {
   applyTheme(newTheme);
   localStorage.setItem("theme", newTheme);
 });
-
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", (e) => {
@@ -94,7 +92,6 @@ closeMenu.addEventListener("click", () => {
 menuItems.forEach((item) => {
   item.addEventListener("mouseenter", () => {
     const category = item.dataset.category;
-
     contentGroups.forEach((content) => {
       content.classList.add("hidden");
       if (content.dataset.content === category) {
