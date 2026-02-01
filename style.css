@@ -24,7 +24,10 @@ header i {
 .dark header i {
     color: #fff !important;
 }
-.dark header i :hover,
+.dark header i :hover{
+      color: #818181 !important;
+  
+}
 .dark header svg :hover {
     color: #818181 !important;
 }
