@@ -1,49 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sports Archives-Mix</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsBlock-clone</title>
   <!-- Tailwind CSS with dark mode enabled -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: "class",
+      darkMode: 'class',
       theme: {
-        extend: {},
-      },
-    };
+        container: {
+          center: true,
+          padding: {
+            DEFAULT: '16px',
+            sm: '16px',
+            md: '32px',
+            lg: '40px',
+            xl: '48px',
+          },
+          screens: {
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+          },
+        },
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
   </script>
-
   <!-- Theme initialization -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const currentTheme =
-        localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light");
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentTheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-      if (currentTheme === "dark") {
-        document.documentElement.classList.add("dark");
+      if (currentTheme === 'dark') {
+        document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove('dark');
       }
     });
   </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white text-black dark:bg-[#111] dark:text-white">
+<body class="bg-white text-black dark:bg-[#1a1a1a] dark:text-white">
   <!-- header -->
-  <header class="sticky top-0 z-50 bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-[#494949]">
+  <!-- <header class=" border-b border-gray-200 dark:border-[#494949]"> -->
+ <header class="sticky top-0 z-50 bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-[#494949]">
     <div class="container mx-auto px-4 md:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- px-2 -->
@@ -55,7 +70,8 @@
               <i class="fa-solid fa-bars"></i>
             </button>
             <div>
-              <div class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex md:justify-start
+              <div
+                class="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:flex md:justify-start
          box-border cursor-pointer font-inter font-bold text-white text-[24px] tracking-[-1.8px] leading-[36px] h-[24px] max-h-[40px] w-[69px] whitespace-nowrap text-left transition-all duration-300 ease-in-out align-middle ">
                 <img src="img/logo.png" class="block dark:hidden " alt="logo">
                 <img src="img/logo-dark.png" class="hidden dark:block " alt="logo dark">
@@ -64,7 +80,8 @@
           </div>
           <div class="hidden md:flex w-[1px] h-16 bg-[#494949] dark:bg-[#494949] "></div>
           <!-- mobile menubar -->
-          <div id="mobileMenu" class="fixed top-0 left-0 max-w-[90%] sm:max-w-[400px] h-full bg-white dark:bg-[#111] transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto ">
+          <div id="mobileMenu"
+            class="fixed top-0 left-0 max-w-[90%] sm:max-w-[400px] h-full bg-white dark:bg-[#1a1a1a] transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto ">
             <div class="p-4 flex justify-between items-center border-b border-gray-700">
               <img src="img/logo.png" alt="Light Logo" class="block dark:hidden">
               <img src="img/logo-dark.png" alt="Dark Logo" class="hidden dark:block">
@@ -119,7 +136,7 @@
                 <p class="text-gray-400 text-sm mb-4">Get notified of the best stories straight to your inbox.</p>
                 <input type="email" placeholder="Enter your email address"
                   class="w-full bg-white border border-gray-700 px-3 py-2 rounded-full mb-3 text-sm">
-                <button class="w-full bg-[#111] text-white py-2 rounded font-bold">Subscribe</button>
+                <button class="w-full bg-[#1a1a1a] text-white py-2 rounded font-bold">Subscribe</button>
                 <div class="flex items-start gap-2 mt-4">
                   <input type="checkbox" class="mt-1 shrink-0 bg-blue-400">
                   <p class="text-xs text-gray-400 leading-relaxed">
@@ -166,12 +183,10 @@
             <div class="relative group">
               <a href="/" class="px-2 py-1 box-border cursor-pointer font-inter text-[14px] font-extrabold tracking-[-0.35px] leading-[21px] text-left whitespace-nowrap flex items-center gap-1 text-[#818181] dark:text-[#818181]  transition-all duration-300">
                 <span class="underline underline-offset-4 ">Demos</span>
-                <i
-                  class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
+                <i class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
               </a>
               <!-- Dropdown menu -->
-              <div
-                class="absolute left-1/2 top-full mt-2 w-[220px] -translate-x-1/2 bg-white dark:bg-[#111] text-black dark:text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded shadow-lg p-4 border border-gray-200 dark:border-gray-700 mt-4">
+              <div class="absolute left-1/2 top-full mt-2 w-[220px] -translate-x-1/2 bg-white dark:bg-[#1a1a1a] text-black dark:text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded shadow-lg p-4 border border-gray-200 dark:border-gray-700 mt-4">
                 <ul class="space-y-2">
                   <li class="hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer border-b border-gray-400">
                     Newsblock
@@ -213,12 +228,9 @@
               <a href="#"
                 class="box-border text-black dark:text-white cursor-pointer font-inter text-[14px] font-extrabold  tracking-[-0.35px] leading-[21px] text-left whitespace-nowrap relative antialiased flex items-center gap-1 px-2 py-1 hover:text-[#858585] dark:hover:text-[#858585]  transition-all duration-300">
                 <span class="hover:underline hover:underline-offset-4">Features</span>
-                <i
-                  class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
+                <i class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
               </a>
-              <div class="absolute left-1/2 top-full mt-2 w-[220px] -translate-x-1/2 bg-white dark:bg-[#111] text-black 
-            dark:text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300
-             z-50 rounded shadow-lg p-4 border border-gray-200 dark:border-gray-700 mt-5">
+              <div class="absolute left-1/2 top-full mt-2 w-[220px] -translate-x-1/2 bg-white dark:bg-[#1a1a1a] text-black dark:text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 rounded shadow-lg p-4 border border-gray-200 dark:border-gray-700 mt-5">
                 <ul class="space-y-2 relative">
                   <li class="hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer">Newsblock
                     <span class="text-white text-[10px] font-bold px-2 py-0.5">News</span>
@@ -227,10 +239,7 @@
                     Mix
                     <span class="text-white text-[10px] font-bold px-2 py-0.5">Entertainment</span>
                     <i class="fa-solid fa-chevron-right"></i>
-                    <ul
-                      class="hidden absolute left-full top-0 ml-2 w-[180px] bg-white dark:bg-[#111] text-black dark:text-white
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                 transition-all duration-300 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-2 space-y-2">
+                    <ul class="hidden absolute left-full top-0 ml-2 w-[180px] bg-white dark:bg-[#1a1a1a] text-black dark:text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-2 space-y-2">
                       <li class="hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer">Sub Mix 1</li>
                       <li class="hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer">Sub Mix 2</li>
                       <li class="hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer">Sub Mix 3</li>
@@ -270,7 +279,7 @@
                   class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
               </a>
               <div class="absolute left-1/2 top-full mt-2 w-[220px] -translate-x-1/2
-            bg-white dark:bg-[#111] text-black dark:text-white
+            bg-white dark:bg-[#1a1a1a] text-black dark:text-white
             opacity-0 invisible group-hover:opacity-100 group-hover:visible
             transition-all duration-300 z-50 rounded shadow-lg p-4
             border border-gray-200 dark:border-gray-700 mt-4">
@@ -334,7 +343,7 @@
               </a>
               <!-- Dropdown -->
               <div
-                class="absolute flex mt-6  left-1/2 -translate-x-1/2  top-full w-[1000px] max-w-6xl bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 shadow-xl dark:bg-[#111]">
+                class="absolute flex mt-6  left-1/2 -translate-x-1/2  top-full w-[1000px] max-w-6xl bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-6 shadow-xl dark:bg-[#1a1a1a]">
                 <div class="grid grid-cols-12 gap-6">
                   <!-- Left sidebar -->
                   <div class="col-span-3 pr-4 border-r border-gray-300 dark:border-gray-700">
@@ -491,14 +500,13 @@
           <button>
             <i class="fa-solid fa-magnifying-glass text-lg"></i>
           </button>
-          <a href="#" class="hidden md:flex items-center text-black dark:text-white   box-border text-black dark:text-white cursor-pointer font-inter text-[14px] font-extrabold  tracking-[-0.35px]leading-[21px] text-left whitespace-nowrap relative antialiased flex items-center gap-1 px-2 py-1 hover:text-[#858585] dark:hover:text-[#858585] transition-all duration-300">
+          <a href="#" class="hidden md:flex items-center text-black dark:text-white  box-border text-black dark:text-white cursor-pointer font-inter text-[14px] font-extrabold  tracking-[-0.35px]leading-[21px] text-left whitespace-nowrap relative antialiased flex items-center gap-1 px-2 py-1 hover:text-[#858585] dark:hover:text-[#858585] transition-all duration-300">
             <i class="fa-regular fa-envelope text-lg"></i>
             Newsletter
           </a>
           <div class="hidden md:flex w-[1px] h-16 bg-[#494949] dark:bg-[#494949]"></div>
           <a href="#"
-            class="hidden md:flex items-center  text-black dark:text-white  mr-5
-          box-border text-black dark:text-white cursor-pointer font-inter text-[14px] font-extrabold tracking-[-0.35px] leading-[21px] text-left whitespace-nowrap relative antialiased flex items-center gap-1 px-2 py-1  hover:text-[#858585] dark:hover:text-[#858585] transition-all duration-300">
+            class="hidden md:flex items-center text-black dark:text-white mr-5  box-border text-black dark:text-white cursor-pointer font-inter text-[14px] font-extrabold tracking-[-0.35px] leading-[21px] text-left whitespace-nowrap relative antialiased flex items-center gap-1 px-2 py-1  hover:text-[#858585] dark:hover:text-[#858585] transition-all duration-300">
             <span class="hover:underline hover:underline-offset-4">Follow</span>
             <i
               class="fa-solid fa-chevron-down text-[10px] text-current transition-colors duration-200 hover:text-[#818181] mt-1"></i>
@@ -526,7 +534,7 @@
     </div>
   </header>
   <!-- breadcrumbs/texts -->
-  <section class="bg-white dark:bg-[#111] dark:text-white py-24  ">
+  <section class="bg-white dark:bg-[#1a1a1a] dark:text-white py-24  ">
     <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
       <div class="lg:col-span-8">
         <span class="font-extrabold text-sm">Browsing Category</span>
@@ -766,7 +774,7 @@
       </div>
       <aside class="md:col-span-4 w-full space-y-4 md:space-y-8 ">
          <p class="font-semibold">Follow us</p>
-        <ul class="flex gap-12 dark:bg-[#111] dark:text-white bg-white text-black">
+        <ul class="flex gap-12 dark:bg-[#1a1a1a] dark:text-white bg-white text-black">
           <li>
             <a href="https://www.facebook.com/"
               class="pl-2 flex flex-col items-center gap-1 text-gray-300 hover:text-blue-500">
@@ -817,7 +825,7 @@
             </p>
             <input type="email" placeholder="Enter your email"
               class="w-full bg-white border border-gray-700 px-3 py-1 rounded-full mb-3 text-sm">
-            <button class="w-full bg-[#3d3d3d] hover:bg-[#111] text-white py-2 rounded font-bold">
+            <button class="w-full bg-[#3d3d3d] hover:bg-[#1a1a1a] text-white py-2 rounded font-bold">
               Subscribe
               <i class="fa-solid fa-chevron-right fa-2xs"></i>
             </button>
@@ -990,7 +998,7 @@
     </div>
   </section>
   <!-- NEWSLETTER SECTION -->
-  <section class="bg-[#111] text-white py-16 border-b border-gray-700">
+  <section class="bg-[#1a1a1a] text-white py-16 border-b border-gray-700">
     <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
       <div class="flex items-center gap-4">
         <span class="italic font-extrabold text-sm tracking-widest">NEWSLETTER</span>
@@ -1024,7 +1032,7 @@
     </div>
   </section>
   <!-- FOOTER SECTION -->
-  <footer class="bg-[#111] text-white">
+  <footer class="bg-[#1a1a1a] text-white">
     <div class="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-4 ">
       <div class="border-r border-[#353535] py-20">
         <h1 class="text-3xl font-extrabold mb-3">MIX</h1>
